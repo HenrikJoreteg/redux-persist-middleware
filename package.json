@@ -6,9 +6,6 @@
   "bugs": {
     "url": "https://github.com/HenrikJoreteg/redux-persist-middleware/issues"
   },
-  "dependencies": {
-    "ric-shim": "1.0.0"
-  },
   "devDependencies": {
     "microbundle": "0.4.4",
     "redux": "3.7.2",
@@ -36,7 +33,7 @@
     "url": "https://github.com/HenrikJoreteg/redux-persist-middleware.git"
   },
   "scripts": {
-    "build": "microbundle --external=all",
+    "build": "microbundle",
     "prepublish": "npm run build",
     "test": "npm run build && tape test.js"
   },
