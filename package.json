@@ -1,0 +1,44 @@
+{
+  "name": "redux-persist-middleware",
+  "description": "Creates Redux middleware that will lazily persist data from certain reducers, when certain actions occur.",
+  "version": "0.0.0",
+  "author": "Henrik Joreteg <henrik@joreteg.com> (joreteg.com)",
+  "bugs": {
+    "url": "https://github.com/HenrikJoreteg/redux-persist-middleware/issues"
+  },
+  "dependencies": {
+    "ric-shim": "1.0.0"
+  },
+  "devDependencies": {
+    "microbundle": "0.4.4",
+    "redux": "3.7.2",
+    "tape": "4.9.0"
+  },
+  "files": [
+    "dist"
+  ],
+  "homepage": "https://github.com/HenrikJoreteg/redux-persist-middleware",
+  "keywords": [
+    "PWA",
+    "redux",
+    "cache",
+    "indexeddb"
+  ],
+  "license": "MIT",
+  "main": "dist/redux-persist-middleware.js",
+  "module": "dist/redux-persist-middleware.m.js",
+  "prettier": {
+    "semi": false,
+    "singleQuote": true
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HenrikJoreteg/redux-persist-middleware.git"
+  },
+  "scripts": {
+    "build": "microbundle --external=all",
+    "prepublish": "npm run build",
+    "test": "npm run build && tape test.js"
+  },
+  "source": "index.js"
+}
