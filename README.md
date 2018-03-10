@@ -104,7 +104,8 @@ $ npm i && npm test
 
 ## Change log
 
-`1.0.0`: initial release
+* `1.0.1`: bugfix to make it work in a web worker
+* `1.0.0`: initial release
 
 ## credits
 

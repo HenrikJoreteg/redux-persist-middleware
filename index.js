@@ -2,7 +2,8 @@ const IS_BROWSER = !!(
   typeof window !== 'undefined' || typeof self !== 'undefined'
 )
 const fallback = cb => setTimeout(cb, 0)
-const ric = (IS_BROWSER && window.requestIdleCallback) || fallback
+const ric =
+  typeof requestIdleCallback === 'undefined' ? fallback : requestIdleCallback
 
 export default ({ cacheFn, actionMap, logger }) => ({
   getState
