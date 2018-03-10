@@ -13,11 +13,11 @@ Works really well with the tiny cache library [money-clip](https://github.com/He
 
 ## Why?
 
-* I want caching should to be a seamless asynchronous side effect in Redux, done when the browser is not busy with other things (hence the use of `requestIdleCallback`).
-* Lets you bring your own persistance library. I use [money-clip](https://github.com/HenrikJoreteg/money-clip) because it's async, IndexedDB powered (not synch and blocking `localStorage`), and supports versioning and max age.
-* I don't like other patterns I've seen of dispatching special `PERSIST` actions because that is likely to trigger unnecessary renders and the work of persisting data has no direct impact on the UI. And, in my opinion, should be done lazily to keep app performing smoothly.
-* I don't like other patterns I've seen of write on every action, I want to pick what reducers get persisted on what actions in an opt-in sort of way.
-* Is inert if running in node.
+* I think caching should to be a seamless asynchronous side effect in Redux, done when the browser is not busy with other things (hence the use of `requestIdleCallback`).
+* Lets you bring your own persistance library. I use [money-clip](https://github.com/HenrikJoreteg/money-clip) because it's tiny, async, IndexedDB-powered (not sync and blocking like `localStorage`), and supports versioning and max age.
+* I want to dispatching special persistance related actions to trigger writing to cache because such actions are likely to trigger unnecessary renders. The work of persisting data has no direct impact on the UI and in my opinion, should be done lazily to keep app performing smoothly.
+* I don't want to write on every action, I want to pick what reducers get persisted on what actions in an opt-in sort of way.
+* inert if running in node.
 
 ## install
 
