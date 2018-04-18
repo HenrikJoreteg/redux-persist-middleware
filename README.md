@@ -60,7 +60,7 @@ const persistMiddleware = getPersistMiddleware({
   // a function to call to persist stuff.
   // This *must* return a Promise and
   // *must take two arguments: (key, value)*
-  cacheFunction: cache.set,
+  cacheFn: cache.set,
   // optionally logs out which action triggered
   // something to be cached and what reducers
   // were persisted as a result.
